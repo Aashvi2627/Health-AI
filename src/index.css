@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #f7df1e;
+  --primary-dark: #e6c700;
+  --background: #000000;
+  --text: #ffffff;
+  --gray: #333333;
+  --gray-light: #555555;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-md border border-yellow-400 transition-all duration-300 transform hover:scale-105;
+  }
+
+  .card {
+    @apply bg-gray-900 rounded-xl p-6 shadow-lg border border-gray-800 hover:border-yellow-400 transition-all duration-300;
+  }
+
+  .input-field {
+    @apply bg-gray-800 border border-gray-700 focus:border-yellow-400 rounded-md px-4 py-2 w-full text-white focus:outline-none;
+  }
+
+  .checkbox-container {
+    @apply flex items-center space-x-3 p-3 rounded-md hover:bg-gray-800 transition-colors;
+  }
+
+  .checkbox-custom {
+    @apply h-5 w-5 rounded border-2 border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-yellow-400;
+  }
+}
